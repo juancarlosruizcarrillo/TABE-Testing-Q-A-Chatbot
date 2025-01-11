@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     question.addEventListener('click', function () {
       const answer = this.nextElementSibling;
       
-      // Toggle the display of the answer
+      // Toggle the display of the answer with max-height and padding transitions
       if (answer.style.maxHeight) {
         // If it's open, close it
         answer.style.maxHeight = null;
