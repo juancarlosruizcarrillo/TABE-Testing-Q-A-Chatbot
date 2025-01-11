@@ -1,9 +1,11 @@
-// Function to toggle the FAQ answers
+// Toggle FAQ answers
 function toggleAnswer(element) {
     const answer = element.nextElementSibling;
-    if (answer.style.display === 'block') {
-        answer.style.display = 'none';
+
+    // Hide or show the answer
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
     } else {
-        answer.style.display = 'block';
+        answer.style.display = "block";
     }
 }
