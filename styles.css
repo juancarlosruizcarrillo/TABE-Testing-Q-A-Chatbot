@@ -30,7 +30,7 @@ h1 {
 }
 
 .question {
-  background-color: #007bff;
+  background-color: #28a745; /* Green color */
   color: white;
   padding: 15px;
   font-size: 18px;
@@ -41,14 +41,16 @@ h1 {
 }
 
 .question:hover {
-  background-color: #0056b3;
+  background-color: #218838; /* Darker green on hover */
 }
 
 .answer {
   background-color: #f9f9f9;
   padding: 10px;
-  border-left: 3px solid #007bff;
+  border-left: 3px solid #28a745; /* Green border */
   display: none;
+  max-height: 0;  /* Set to 0 initially */
+  overflow: hidden;
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
