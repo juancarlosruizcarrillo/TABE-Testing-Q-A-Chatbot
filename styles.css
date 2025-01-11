@@ -66,3 +66,24 @@ h1 {
 .answer a:hover {
   text-decoration: underline;
 }
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.question {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.question:hover {
+    background-color: #ddd;
+}
+
