@@ -121,5 +121,75 @@
             document.getElementById('user-input').value = '';
         }
     </script>
+    <script>
+    const inputField = document.getElementById("user-input");
+    const outputDiv = document.getElementById("chat-output");
+
+    inputField.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+            event.preventDefault(); // Prevent form submission when Enter is pressed
+        }
+    });
+
+    async function sendMessage() {
+        const userInput = inputField.value.trim();
+        if (!userInput) return; // Ignore empty input
+
+        // Clear the chat output before appending new content
+        outputDiv.innerHTML = ''; 
+
+        // Add user input to output
+        outputDiv.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+
+        // Fetch the response from Flask server
+        const response = await fetch("/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ question: userInput })
+        });
+
+        const data = await response.json();
+
+        // If there is a suggested question, show it
+        if (data.suggested_question) {
+            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
+        }
+
+        // Add chatbot's response to output
+        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
+        
+        // Scroll the output div to the bottom
+        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
+
+        // Clear the input field after the message is sent
+        inputField.value = "";
+    }
+
+    async function triggerTopic(topic) {
+        const response = await fetch("/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ question: topic })
+        });
+
+        const data = await response.json();
+
+        // Add topic input, suggested question, and chatbot response to output
+        outputDiv.innerHTML += `<p><strong>You (Clicked):</strong> ${topic}</p>`;
+        if (data.suggested_question) {
+            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
+        }
+        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
+        
+        // Scroll the output div to the bottom
+        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
+    }
+</script>
+
 </body>
 </html>
