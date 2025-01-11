@@ -1,47 +1,51 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light gray background for overall page */
-    color: black;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text for better contrast */
     margin: 0;
     padding: 0;
 }
 
 .container {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
 }
 
 h1 {
-    font-size: 2.5rem; /* Larger font size for header */
+    font-size: 3rem; /* Large font size for header */
     text-align: center;
     margin-bottom: 20px;
-    color: #006232; /* Green color for header */
+    color: #006232; /* CAC Green for header */
+    line-height: 1.2;
 }
 
 .question {
-    font-size: 1.5rem; /* Larger font size for questions */
+    font-size: 1.6rem; /* Larger font size for questions */
     cursor: pointer;
-    padding: 15px;
-    background-color: #006232; /* Green color for questions */
-    margin: 10px 0;
+    padding: 20px;
+    background-color: #006232; /* Green for questions */
+    margin: 15px 0;
     border: none;
     color: white;
     text-align: left;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for smooth hover effect */
 }
 
 .question:hover {
     background-color: #004b28; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Answer box - white background with black font */
+/* Answer box - white background with black font for best readability */
 .answer {
-    padding: 15px;
+    padding: 20px;
     margin: 10px 0;
     background-color: white; /* White background for answers */
-    color: black; /* Black font for answers */
-    border-radius: 5px;
+    color: black; /* Black text for answers */
+    border-radius: 8px;
     display: none;
     opacity: 0;
     max-height: 0;
@@ -49,21 +53,35 @@ h1 {
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
-/* Show answer on toggle */
+/* Show answer when toggled */
 .answer.show {
     display: block;
     opacity: 1;
-    max-height: 1000px; /* Adjusted max-height for smooth transition */
+    max-height: 1000px; /* Allow answers to expand smoothly */
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
     h1 {
-        font-size: 2rem; /* Slightly smaller header on smaller screens */
+        font-size: 2.5rem; /* Slightly smaller header on tablets */
     }
 
     .question {
-        font-size: 1.2rem; /* Slightly smaller font for questions */
+        font-size: 1.4rem; /* Slightly smaller font for questions on tablets */
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller header on mobile */
+    }
+
+    .question {
+        font-size: 1.2rem; /* Smaller question text on mobile */
     }
 
     .container {
@@ -71,19 +89,27 @@ h1 {
     }
 }
 
-/* Ensure footer stays at the bottom */
+/* Footer styles */
 footer {
     background-color: #006232; /* Green footer */
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+    font-size: 1.2rem;
     position: relative;
     width: 100%;
-    bottom: 0;
-    left: 0;
 }
 
-/* Minimum height for body to prevent footer overlap */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ensuring Footer is always at the bottom */
 body {
     display: flex;
     flex-direction: column;
