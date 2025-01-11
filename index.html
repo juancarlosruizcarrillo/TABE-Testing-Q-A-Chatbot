@@ -3,263 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #chat-output {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 10px;
-            height: 300px;
-            overflow-y: auto;
-        }
-        #chat-form input {
-            width: 80%;
-            padding: 10px;
-            margin-right: 5px;
-        }
-        #chat-form button {
-            padding: 10px;
-        }
-        #topics {
-            margin-top: 20px;
-            list-style: none;
-            padding: 0;
-        }
-        #topics li {
-            margin: 5px 0;
-        }
-        #topics button {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #topics button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>FAQ - Assessment Policy</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <form id="chat-form" onsubmit="return false;">
-        <input type="text" id="user-input" placeholder="Ask me a question" required>
-        <button type="button" onclick="sendMessage()">Send</button>
-    </form>
-    <div id="chat-output"></div>
-    <h3>Topics</h3>
-    <ul id="topics"></ul>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+    <header class="header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Your guide to the Arizona Adult Education Assessment Policy (2024-2025)</p>
+    </header>
+    
+    <main class="faq-section">
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What do my continuing students do on the first day if they don’t have to test?</h2>
+            <div class="faq-answer">
+                <p><strong>Face-to-Face Classes:</strong> Continuing students who do not need to test should not attend class on the first day. Teachers will receive a list of students currently enrolled, with those highlighted in blue indicating they do not need to test. Inform these students that their first day of class will be after testing day.</p>
+                <p><strong>Online Classes:</strong> Teachers will receive a list of students, with those highlighted in blue indicating they do not need to test. Coordinate with the assessment team to schedule testing for those who need progress tests.</p>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What do I do if a student says they have to test but they don’t have a test ticket?</h2>
+            <div class="faq-answer">
+                <p>Verify the student’s testing status by:</p>
+                <ul>
+                    <li>Checking the testing list report sent to you.</li>
+                    <li>Confirming whether the student is listed as requiring testing (those not needing to test are highlighted in blue).</li>
+                    <li>If the student is not on your roster but claims they registered, contact the registration office immediately at <a href="mailto:adult.education@centralaz.edu">adult.education@centralaz.edu</a> or 520-494-5952.</li>
+                </ul>
+                <p>If the student needs testing, issue the appropriate test ticket or guide them to the assessment team for further assistance.</p>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What if a student’s log-in doesn’t work?</h2>
+            <div class="faq-answer">
+                <p>Ensure the student is entering the correct credentials. For login issues:</p>
+                <ul>
+                    <li>Contact <a href="mailto:juan.ruiz@centralaz.edu">juan.ruiz@centralaz.edu</a> or the Instructional Data Coach for support.</li>
+                    <li>For CAC campus computer logins, refer to the “ghost logins” list provided in your email. If these do not work, visit the learning center for alternative logins.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What do I do if a student accidentally starts the wrong test?</h2>
+            <div class="faq-answer">
+                <p>Pause the test immediately and notify the assessment coordinator. Document the incident to ensure proper reporting according to policy. Follow procedures to reset the test or assign the correct assessment.</p>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What happens if a student doesn’t finish their test on the first day?</h2>
+            <div class="faq-answer">
+                <p>Tests should typically be completed within the scheduled three-hour class time. If a test is incomplete:</p>
+                <ul>
+                    <li>Inform the assessment coordinator to schedule a follow-up session.</li>
+                    <li>Subject tests that are started should be completed in one session.</li>
+                    <li>For Reading & Language tests, sessions may be split across days but must be completed within the first 12 hours of attendance to establish an accurate Educational Functioning Level (EFL).</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">How long is each test?</h2>
+            <div class="faq-answer">
+                <p>Test durations vary based on the specific assessment:</p>
+                <ul>
+                    <li>ESL Listening and Reading tests: ~1–1.5 hours per section.</li>
+                    <li>GED Reading: ~1.5 hours; Language: ~1 hour; Mathematics: ~1 hour.</li>
+                    <li>TABE Complete Battery: ~2.5 hours.</li>
+                </ul>
+                <p>Visit <a href="https://tabetest.com/PDFs/TABE_11_12_Max_Testing_Times.pdf" target="_blank">TABE 11&12 Maximum Testing Times</a> for more details.</p>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <h2 class="faq-question" onclick="toggleAnswer(this)">What do I do if a student becomes upset or overwhelmed? And what do I do if I catch them cheating?</h2>
+            <div class="faq-answer">
+                <p><strong>If a student becomes upset or overwhelmed:</strong> Pause the test, provide the student with a moment to regroup, and offer reassurance. Refer them to support services or reschedule their test if needed. Document the situation following program guidelines.</p>
+                <p><strong>If you catch a student cheating:</strong> Immediately stop the test, confiscate unauthorized materials, and document the incident. Inform the assessment coordinator for next steps, which may include invalidating the test or requiring a retake.</p>
+                <p><strong>Prohibited Items:</strong> Electronic devices, books, papers, food, drinks, loose clothing, and other unauthorized materials.</p>
+            </div>
+        </div>
+    </main>
+    
     <script>
-        const knowledgeBase = {
-            "What do my continuing students do on the first day if they don’t have to test?": "Continuing students who do not require testing should engage in regular instructional activities as scheduled. This ensures continuity in their learning process and maximizes instructional time.",
-            "What do I do if a student says they have to test but they don’t have a test ticket?": "If a student indicates they need to test but lacks a test ticket, verify their testing requirements by consulting the program's assessment records or contacting the assessment coordinator. Once confirmed, provide the necessary test ticket or schedule their assessment accordingly.",
-            "What if a student’s log-in doesn’t work?": "In the event of log-in issues, first ensure that the student is entering the correct credentials. If problems persist, contact technical support or the program's IT department to resolve the issue promptly, ensuring minimal disruption to the testing process.",
-            "How do I know which test form (A/B or C/D) to give my students?": "Different test forms are designated based on the student's status and duration in the program. Ensure that you are administering the appropriate test form as specified in the Arizona Adult Education Assessment Policy to maintain assessment validity.",
-            "What do I do if a student is unsure whether they need to test?": "If a student is uncertain about their testing requirements, review their academic records and consult the assessment policy to determine if testing is necessary. Clear communication with the student about their assessment status is essential.",
-            "How do I handle a new student who arrives late and misses their scheduled test?": "For new students who miss their scheduled test, reschedule their assessment at the earliest convenience, adhering to the program's assessment scheduling procedures. Timely assessment is crucial for appropriate placement and instructional planning.",
-            "What should I do if a student needs accommodations for their test?": "Students requiring accommodations should be provided with necessary support as outlined in the Arizona Adult Education Assessment Policy. Ensure that accommodations are in place prior to testing to provide fair and equitable access to assessments.",
-            "How do I know if a student’s previous test scores require them to progress test?": "Review the student's assessment history and the guidelines in the assessment policy to determine if a progress test is warranted. Progress testing should align with the policy's criteria for measuring educational gains.",
-            "What should I do if a student accidentally starts the wrong test section?": "If a student begins an incorrect test section, follow the procedures outlined in the assessment policy for such occurrences. This may involve pausing the test and consulting with the assessment coordinator to rectify the situation appropriately.",
-            "How do I troubleshoot technology issues during testing (e.g., frozen screens, internet disconnection)?": "Address technical issues promptly by following the program's established protocols for technical difficulties during testing. This includes contacting technical support and ensuring that any disruptions are documented and managed in accordance with the assessment policy.",
-            "What should I do if a student finishes one test section but is missing the next one in their test queue?": "Ensure that all required test sections are scheduled and accessible to the student. If a section is missing, coordinate with the assessment coordinator or technical support to add the necessary test section to the student's queue promptly.",
-            "Can students use scratch paper during the test, and how should it be handled?": "The use of scratch paper during assessments should comply with the guidelines specified in the Arizona Adult Education Assessment Policy. Typically, scratch paper is allowed for certain test sections, but it must be collected and disposed of securely after the test to maintain test security.",
-            "How long should I expect each testing session to take?": "Testing session durations vary depending on the specific assessment and test level. Refer to the assessment policy for detailed information on allowable times for each test to schedule sessions appropriately.",
-            "How do I make sure students are in the correct testing room or lab?": "Verify student assignments to testing rooms or labs by cross-referencing the testing schedule and student rosters. Clear signage and communication with students can help ensure they arrive at the correct location.",
-            "What happens if a student doesn’t finish their test on the first day?": "If a student is unable to complete their test within the allotted time, follow the procedures outlined in the assessment policy for incomplete assessments. This may involve scheduling a continuation session, ensuring that test security and validity are maintained.",
-            "How do I guide students who need to retake the test because of an error or invalid test submission?": "In cases where a retest is necessary due to errors or invalid submissions, consult the assessment policy for retesting guidelines. Ensure that the retest is scheduled promptly and that the student is informed of the reason and process for retaking the test.",
-            "What do I do if a student becomes upset or overwhelmed during the test?": "If a student exhibits signs of distress during testing, follow the program's protocols for such situations, which may include pausing the test and providing appropriate support. Ensure that the student's well-being is prioritized while maintaining the integrity of the assessment process.",
-            "How should I handle GED students testing on different subjects (e.g., Reading, Language, Mathematics) while ESL students are taking Listening and Reading tests?": "Coordinate testing schedules and environments to accommodate the different assessments, ensuring that each group has the appropriate resources and settings as specified in the assessment policy. This may involve separate testing rooms or staggered schedules to minimize disruptions.",
-            "Who should I contact if I encounter an issue I cannot resolve during testing?": "For unresolved issues during testing, contact the designated assessment coordinator or program administrator as specified in the assessment policy. Having a clear chain of command ensures that issues are addressed promptly and effectively.",
-            "What is the protocol for collecting and verifying student test tickets?": "Follow the procedures outlined in the assessment policy for distributing, collecting, and verifying test tickets."
-        };
-
-        // Fuse.js options for fuzzy search
-        const fuse = new Fuse(Object.keys(knowledgeBase), {
-            includeScore: true,
-            threshold: 0.3
-        });
-
-        // Display topics dynamically
-        const topicsList = document.getElementById('topics');
-        Object.keys(knowledgeBase).forEach((topic) => {
-            const listItem = document.createElement('li');
-            const button = document.createElement('button');
-            button.innerText = topic;
-            button.onclick = () => showAnswer(topic);
-            listItem.appendChild(button);
-            topicsList.appendChild(listItem);
-        });
-
-        function showAnswer(topic) {
-            const answer = knowledgeBase[topic];
-            const outputDiv = document.getElementById('chat-output');
-            outputDiv.innerHTML += `<p><strong>You:</strong> ${topic}</p>`;
-            outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${answer}</p>`;
-            outputDiv.scrollTop = outputDiv.scrollHeight;
-        }
-
-        function sendMessage() {
-            const userInput = document.getElementById('user-input').value.trim();
-            if (!userInput) return;
-
-            const result = fuse.search(userInput);
-            const bestMatch = result.length > 0 ? result[0].item : null;
-            const response = bestMatch ? knowledgeBase[bestMatch] : "I'm sorry, I don't know the answer to that.";
-
-            const outputDiv = document.getElementById('chat-output');
-            outputDiv.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
-            outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${response}</p>`;
-            outputDiv.scrollTop = outputDiv.scrollHeight;
-
-            document.getElementById('user-input').value = '';
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
         }
     </script>
-    <script>
-    const inputField = document.getElementById("user-input");
-    const outputDiv = document.getElementById("chat-output");
-
-    inputField.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            sendMessage();
-            event.preventDefault(); // Prevent form submission when Enter is pressed
-        }
-    });
-
-    async function sendMessage() {
-        const userInput = inputField.value.trim();
-        if (!userInput) return; // Ignore empty input
-
-        // Clear the chat output before appending new content
-        outputDiv.innerHTML = ''; 
-
-        // Add user input to output
-        outputDiv.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
-
-        // Fetch the response from Flask server
-        const response = await fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ question: userInput })
-        });
-
-        const data = await response.json();
-
-        // If there is a suggested question, show it
-        if (data.suggested_question) {
-            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
-        }
-
-        // Add chatbot's response to output
-        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
-        
-        // Scroll the output div to the bottom
-        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
-
-        // Clear the input field after the message is sent
-        inputField.value = "";
-    }
-
-    async function triggerTopic(topic) {
-        const response = await fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ question: topic })
-        });
-
-        const data = await response.json();
-
-        // Add topic input, suggested question, and chatbot response to output
-        outputDiv.innerHTML += `<p><strong>You (Clicked):</strong> ${topic}</p>`;
-        if (data.suggested_question) {
-            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
-        }
-        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
-        
-        // Scroll the output div to the bottom
-        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
-    }
-</script>
-    <script>
-    const inputField = document.getElementById("user-input");
-    const outputDiv = document.getElementById("chat-output");
-
-    inputField.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            sendMessage();
-            event.preventDefault(); // Prevent form submission when Enter is pressed
-        }
-    });
-
-    async function sendMessage() {
-        const userInput = inputField.value.trim();
-        if (!userInput) return; // Ignore empty input
-
-        // Clear the chat output before appending new content
-        outputDiv.innerHTML = ''; 
-
-        // Add user input to output
-        outputDiv.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
-
-        // Fetch the response from Flask server
-        const response = await fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ question: userInput })
-        });
-
-        const data = await response.json();
-
-        // If there is a suggested question, show it
-        if (data.suggested_question) {
-            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
-        }
-
-        // Add chatbot's response to output
-        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
-        
-        // Scroll the output div to the bottom
-        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
-
-        // Clear the input field after the message is sent
-        inputField.value = ""; // This clears the input field
-    }
-
-    async function triggerTopic(topic) {
-        const response = await fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ question: topic })
-        });
-
-        const data = await response.json();
-
-        // Add topic input, suggested question, and chatbot response to output
-        outputDiv.innerHTML += `<p><strong>You (Clicked):</strong> ${topic}</p>`;
-        if (data.suggested_question) {
-            outputDiv.innerHTML += `<p><strong>Suggested Question:</strong> ${data.suggested_question}</p>`;
-        }
-        outputDiv.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
-        
-        // Scroll the output div to the bottom
-        outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll to the latest message
-    }
-</script>
-
-
 </body>
 </html>
