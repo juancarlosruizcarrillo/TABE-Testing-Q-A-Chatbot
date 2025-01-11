@@ -1,36 +1,58 @@
-/* Basic styling for questions and answers */
-.faq {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+/* General styles for the page */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Styling the FAQ items */
+.faq-item {
+  margin-bottom: 20px;
 }
 
 .question {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
   border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.question:hover {
+  background-color: #0056b3;
 }
 
 .answer {
-  font-size: 16px;
-  display: block; /* Ensure it is block-level */
-  overflow: hidden;
-  max-height: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 15px;
-  line-height: 1.5;
-  color: #555;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 3px solid #007bff;
+  display: none;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-.answer p, .answer ol {
+.answer p, .answer ol, .answer ul {
   margin: 10px 0;
 }
 
