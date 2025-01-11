@@ -9,8 +9,8 @@ body {
 
 /* Header Section */
 .header {
-    background-color: #006232; /* CAC green */
-    color: #006232;
+    background-color: #006232; /* Corrected CAC green */
+    color: #fff;
     text-align: center;
     padding: 20px 10px;
 }
@@ -44,7 +44,7 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 15px 20px;
-    background-color: #007b5f;
+    background-color: #006232; /* Corrected CAC green */
     color: #fff;
     cursor: pointer;
     border-radius: 8px 8px 0 0;
@@ -52,7 +52,7 @@ body {
 }
 
 .faq-question:hover {
-    background-color: #005945; /* Darker CAC green */
+    background-color: #004d25; /* Darker CAC green for hover effect */
 }
 
 .faq-answer {
