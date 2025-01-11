@@ -5,11 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     question.addEventListener("click", function () {
       const answer = this.nextElementSibling;
 
-      // Toggle visibility of the answer
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
+      // Toggle visibility of the answer with a smooth animation
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        answer.style.paddingTop = null;
+        answer.style.paddingBottom = null;
       } else {
-        answer.style.display = "block";
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.paddingTop = "10px";
+        answer.style.paddingBottom = "10px";
       }
     });
   });
