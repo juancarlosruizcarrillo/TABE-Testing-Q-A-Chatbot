@@ -3,66 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A Website for TABE Testing</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TABE Test Q&A</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>TABE Test Administering FAQs</h1>
+    </header>
 
-    <div class="container">
-        <h1>Frequently Asked Questions for TABE Testing</h1>
-        
-        <div class="question" onclick="toggleAnswer(event)">
-            What do my continuing students do on the first day if they don’t have to test?
+    <section id="faq">
+        <div class="question" onclick="toggleAnswer('answer1')">
+            <h3>What do my continuing students do on the first day if they don’t have to test?</h3>
         </div>
-        <div class="answer">
+        <div id="answer1" class="answer">
             <p><strong>Face-to-Face Classes:</strong> Continuing students who do not need to test should not attend class on the first day. Teachers will receive a list of students currently enrolled, with those highlighted in blue indicating they do not need to test. Please inform these students that their first day of class will be after testing day. The first day of classes is reserved primarily for testing.</p>
             <p><strong>Online Classes:</strong> Teachers will receive a list of students, with those highlighted in blue indicating they do not need to test. Coordinate with the assessment team to schedule testing for those who need progress tests.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            What do I do if a student says they have to test but they don’t have a test ticket?
+        <div class="question" onclick="toggleAnswer('answer2')">
+            <h3>What do I do if a student says they have to test but they don’t have a test ticket?</h3>
         </div>
-        <div class="answer">
+        <div id="answer2" class="answer">
             <p>Verify the student’s testing status by:</p>
-            <ul>
+            <ol>
                 <li>Checking the testing list report sent to you.</li>
                 <li>Confirming whether the student is listed as requiring testing (those not needing to test are highlighted in blue).</li>
                 <li>If the student is not on your roster but claims they registered, contact the registration office immediately at <strong>adult.education@centralaz.edu</strong> or <strong>520-494-5952</strong>.</li>
-            </ul>
+            </ol>
+            <p>If the student needs testing, issue the appropriate test ticket or guide them to the assessment team for further assistance.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            What if a student’s log-in doesn’t work?
+        <div class="question" onclick="toggleAnswer('answer3')">
+            <h3>What if a student’s log-in doesn’t work?</h3>
         </div>
-        <div class="answer">
-            <p>1. Ensure the student is entering the correct credentials.</p>
-            <p>2. For issues with the DRC INSIGHT application, contact <strong>juan.ruiz@centralaz.edu</strong> or the Instructional Data Coach for support.</p>
-            <p>3. For CAC campus computer logins, refer to the “ghost logins” list provided in your email. If these do not work, visit the learning center for alternative logins.</p>
+        <div id="answer3" class="answer">
+            <p>Ensure the student is entering the correct credentials. For issues with the DRC INSIGHT application, contact <strong>juan.ruiz@centralaz.edu</strong> or the Instructional Data Coach for support. For CAC campus computer logins, refer to the “ghost logins” list provided in your email. If these do not work, visit the learning center for alternative logins.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            What do I do if a student accidentally starts the wrong test?
+        <div class="question" onclick="toggleAnswer('answer4')">
+            <h3>What do I do if a student accidentally starts the wrong test?</h3>
         </div>
-        <div class="answer">
-            <p>Pause the test immediately and notify the assessment coordinator.</p>
-            <p>1. Document the incident to ensure proper reporting according to policy.</p>
-            <p>2. Follow procedures to reset the test or assign the correct assessment.</p>
+        <div id="answer4" class="answer">
+            <p>Pause the test immediately and notify the assessment coordinator. Document the incident to ensure proper reporting according to policy. Follow procedures to reset the test or assign the correct assessment.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            What happens if a student doesn’t finish their test on the first day?
+        <div class="question" onclick="toggleAnswer('answer5')">
+            <h3>What happens if a student doesn’t finish their test on the first day?</h3>
         </div>
-        <div class="answer">
-            <p>1. Tests should typically be completed within the scheduled three-hour class time. Ensure students are guided through instructions to avoid delays.</p>
-            <p>2. If a test is incomplete, inform the assessment coordinator to schedule a follow-up session.</p>
-            <p>3. While practice tests are optional and can reduce testing time, subject tests that are started should be completed in one session.</p>
-            <p>4. For Reading & Language tests, sessions may be split across days, but they must be completed within the first 12 hours of attendance to establish an accurate Educational Functioning Level (EFL).</p>
+        <div id="answer5" class="answer">
+            <p>Tests should typically be completed within the scheduled three-hour class time. Ensure students are guided through instructions to avoid delays. If a test is incomplete, inform the assessment coordinator to schedule a follow-up session. While practice tests are optional and can reduce testing time, subject tests that are started should be completed in one session.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            How long is each test?
+        <div class="question" onclick="toggleAnswer('answer6')">
+            <h3>How long is each test?</h3>
         </div>
-        <div class="answer">
+        <div id="answer6" class="answer">
             <p><strong>ESL Students:</strong> Listening and Reading tests typically take 1–1.5 hours per section.</p>
             <p><strong>GED Students:</strong></p>
             <ul>
@@ -74,16 +70,12 @@
             <p>Visit the <a href="https://tabetest.com/PDFs/TABE_11_12_Max_Testing_Times.pdf" target="_blank">TABE 11&12 Maximum Testing Times</a> for more details.</p>
         </div>
 
-        <div class="question" onclick="toggleAnswer(event)">
-            What do I do if a student becomes upset or overwhelmed? And what do I do if I catch them cheating?
+        <div class="question" onclick="toggleAnswer('answer7')">
+            <h3>What do I do if a student becomes upset or overwhelmed? And what do I do if I catch them cheating?</h3>
         </div>
-        <div class="answer">
-            <p><strong>If a student becomes upset or overwhelmed:</strong></p>
-            <p>Pause the test, allow the student to take a break, and offer reassurance. Refer them to support services or reschedule their test if necessary. Document the situation following program guidelines.</p>
-
-            <p><strong>If you catch a student cheating:</strong></p>
-            <p>Immediately stop the test, confiscate unauthorized materials, and document the incident. Inform the assessment coordinator to determine next steps, which may include invalidating the test or requiring a retake.</p>
-
+        <div id="answer7" class="answer">
+            <p><strong>If a student becomes upset or overwhelmed:</strong> Pause the test, allow the student to take a break, and offer reassurance. Refer them to support services or reschedule their test if necessary. Document the situation following program guidelines.</p>
+            <p><strong>If you catch a student cheating:</strong> Immediately stop the test, confiscate unauthorized materials, and document the incident. Inform the assessment coordinator to determine next steps, which may include invalidating the test or requiring a retake.</p>
             <p><strong>Unauthorized Materials Prohibited During Testing:</strong></p>
             <ul>
                 <li>Electronic devices (phones, watches, etc.)</li>
@@ -91,7 +83,6 @@
                 <li>Food, drink, backpacks, or loose clothing</li>
                 <li>Any device capable of recording or reproducing test content</li>
             </ul>
-
             <p><strong>Testing Irregularities to Report:</strong></p>
             <ul>
                 <li>Unauthorized materials</li>
@@ -100,9 +91,12 @@
                 <li>Examinee illness or refusal to leave after dismissal</li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <footer>
+        <p>&copy; 2025 Central Arizona College Adult Education</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
