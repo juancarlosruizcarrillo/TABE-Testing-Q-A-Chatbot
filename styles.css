@@ -22,7 +22,7 @@ h1 {
 }
 
 .question {
-    font-size: 1.6rem; /* Larger font size for questions */
+    font-size: 1.5rem; /* Larger font size for questions */
     cursor: pointer;
     padding: 20px 30px; /* Increase horizontal padding */
     background-color: #006232; /* Green for questions */
