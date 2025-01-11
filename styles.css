@@ -1,66 +1,16 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Section */
-.header {
-    background-color: #006232; /* Corrected CAC green */
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.header p {
-    font-size: 1.2rem;
-}
-
-/* FAQ Section */
-.faq-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-/* FAQ Items */
-.faq {
-    margin: 15px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.faq-question {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 15px 20px;
-    background-color: #006232; /* Corrected CAC green */
-    color: #fff;
-    cursor: pointer;
-    border-radius: 8px 8px 0 0;
-    transition: background-color 0.3s;
-}
-
-.faq-question:hover {
-    background-color: #004d25; /* Darker CAC green for hover effect */
-}
-
 .faq-answer {
-    display: none;
+    display: none; /* Default state */
     padding: 15px 20px;
     background-color: #f9f9fc;
     border-top: 1px solid #ddd;
     border-radius: 0 0 8px 8px;
+    animation: fadeIn 0.5s ease-in-out;
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+/* Optional smooth transition for height */
+.faq-answer.open {
+    display: block; /* When visible */
     animation: fadeIn 0.5s ease-in-out;
 }
 
