@@ -24,7 +24,7 @@ h1 {
 .question {
     font-size: 1.6rem; /* Larger font size for questions */
     cursor: pointer;
-    padding: 20px;
+    padding: 20px 30px; /* Increase horizontal padding */
     background-color: #006232; /* Green for questions */
     margin: 15px 0;
     border: none;
@@ -32,6 +32,8 @@ h1 {
     text-align: left;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for smooth hover effect */
+    white-space: normal; /* Allow text to wrap and not overflow */
+    word-wrap: break-word; /* Prevent text from overflowing out of the container */
 }
 
 .question:hover {
@@ -82,6 +84,7 @@ h1 {
 
     .question {
         font-size: 1.2rem; /* Smaller question text on mobile */
+        padding: 15px 20px; /* Adjust padding for mobile */
     }
 
     .container {
