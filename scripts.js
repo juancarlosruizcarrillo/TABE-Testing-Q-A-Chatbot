@@ -1,8 +1,16 @@
-document.querySelectorAll('.question').forEach(item => {
-    item.addEventListener('click', () => {
-        const answer = item.nextElementSibling;
-        const isVisible = answer.style.display === 'block';
-        document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
-        answer.style.display = isVisible ? 'none' : 'block';
+document.addEventListener("DOMContentLoaded", function() {
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = question.nextElementSibling;
+
+            // Toggle the visibility of the answer
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
     });
 });
