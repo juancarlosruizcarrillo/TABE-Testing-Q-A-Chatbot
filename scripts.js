@@ -1,16 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const questions = document.querySelectorAll('.question');
-
-    questions.forEach(question => {
-        question.addEventListener('click', function() {
-            const answer = question.nextElementSibling;
-
-            // Toggle the visibility of the answer
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
-    });
-});
+function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+}
