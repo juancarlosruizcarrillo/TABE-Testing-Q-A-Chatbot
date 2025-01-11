@@ -29,7 +29,7 @@ h1 {
     margin: 15px 0;
     border: none;
     color: white;
-    text-align: left;
+    text-align: center;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for smooth hover effect */
     white-space: normal; /* Allow text to wrap and not overflow */
