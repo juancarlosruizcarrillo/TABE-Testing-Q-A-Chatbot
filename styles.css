@@ -1,65 +1,44 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* Basic styling for questions and answers */
 .faq {
-  background-color: #fff;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
 .question {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  color: #333;
-  margin-bottom: 5px;
-  transition: all 0.3s ease;
-}
-
-.question:hover {
-  color: #007bff;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .answer {
   font-size: 16px;
-  display: none;
+  display: block; /* Ensure it is block-level */
+  overflow: hidden;
+  max-height: 0;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 15px;
   line-height: 1.5;
   color: #555;
-  margin-top: 10px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 10px;
+.answer p, .answer ol {
+  margin: 10px 0;
 }
 
-a {
+.answer a {
   color: #007bff;
   text-decoration: none;
 }
 
-a:hover {
+.answer a:hover {
   text-decoration: underline;
 }
